@@ -9,13 +9,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <meta-data
+            android:name="activity_key"
+            android:value="SPEED_CLICKING" />
+
+        <!-- activities -->
+        <activity android:name="games.onestar.splashscreen.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="games.onestar.click.MainActivity" />
+
+        <!-- receivers -->
+        <receiver android:name=".receivers.SplashScreenReceiver">
+            <intent-filter>
+                <action android:name="games.onestar.START_SPEED_CLICKING" />
+            </intent-filter>
+        </receiver>
+
+        <!-- services -->
     </application>
 
 </manifest>
