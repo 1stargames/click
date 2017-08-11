@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="games.onestar.click.MainActivity" />
+        <activity android:name="games.onestar.click.ui.activities.MainActivity" />
+        <activity
+            android:name="games.onestar.click.ui.activities.PlayActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity android:name="games.onestar.click.ui.activities.TimeActivity" />
 
         <!-- receivers -->
         <receiver android:name=".receivers.SplashScreenReceiver">

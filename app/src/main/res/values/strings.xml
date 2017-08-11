@@ -1,3 +1,17 @@
 <resources>
-    <string name="app_name">Speed Clicking</string>
+
+    <!-- general -->
+    <string name="app_name">SPEED CLICKING</string>
+
+    <!-- Main Activity -->
+    <string name="play_button">PLAY</string>
+
+    <!-- Time Activity -->
+    <string name="ten_sec_button">10 SEC</string>
+    <string name="thirty_sec_button">30 SEC</string>
+    <string name="sixty_sec_button">60 SEC</string>
+
+    <!-- Play Activity -->
+    <string name="score">0</string>
+
 </resources>
