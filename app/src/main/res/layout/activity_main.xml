@@ -6,7 +6,7 @@
     android:id="@+id/body"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="games.onestar.click.ui.activities.MainActivity">
+    tools:context="games.onestar.speedclicking.ui.activities.MainActivity">
 
     <TextView
         android:id="@+id/titleTextView"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="games.onestar.click">
+    package="games.onestar.speedclicking">
 
     <application
         android:allowBackup="true"
@@ -22,14 +22,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="games.onestar.click.ui.activities.MainActivity" />
+        <activity android:name="games.onestar.speedclicking.ui.activities.MainActivity" />
         <activity
-            android:name="games.onestar.click.ui.activities.PlayActivity"
+            android:name="games.onestar.speedclicking.ui.activities.PlayActivity"
             android:configChanges="orientation|screenSize" />
-        <activity android:name="games.onestar.click.ui.activities.TimeActivity" />
+        <activity android:name="games.onestar.speedclicking.ui.activities.TimeActivity" />
 
         <!-- receivers -->
-        <receiver android:name=".receivers.SplashScreenReceiver">
+        <receiver android:name="games.onestar.speedclicking.receivers.SplashScreenReceiver">
             <intent-filter>
                 <action android:name="games.onestar.START_SPEED_CLICKING" />
             </intent-filter>

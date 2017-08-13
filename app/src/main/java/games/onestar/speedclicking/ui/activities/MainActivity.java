@@ -1,4 +1,4 @@
-package games.onestar.click.ui.activities;
+package games.onestar.speedclicking.ui.activities;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -13,7 +13,7 @@ import java.util.Random;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-import games.onestar.click.R;
+import games.onestar.speedclicking.R;
 
 public class MainActivity extends AppCompatActivity {
 

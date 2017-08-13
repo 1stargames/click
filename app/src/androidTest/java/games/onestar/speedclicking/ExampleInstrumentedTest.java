@@ -1,4 +1,4 @@
-package games.onestar.click;
+package games.onestar.speedclicking;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

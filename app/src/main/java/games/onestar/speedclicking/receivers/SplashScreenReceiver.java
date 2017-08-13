@@ -1,10 +1,10 @@
-package games.onestar.click.receivers;
+package games.onestar.speedclicking.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import games.onestar.click.ui.activities.MainActivity;
+import games.onestar.speedclicking.ui.activities.MainActivity;
 
 public class SplashScreenReceiver extends BroadcastReceiver {
 

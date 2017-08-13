@@ -1,4 +1,4 @@
-package games.onestar.click.enums;
+package games.onestar.speedclicking.enums;
 
 public enum GameState {
 
