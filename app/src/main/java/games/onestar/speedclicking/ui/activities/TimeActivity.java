@@ -1,6 +1,7 @@
 package games.onestar.speedclicking.ui.activities;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -33,6 +34,11 @@ public class TimeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_time);
         ButterKnife.bind(this);
 
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
+        tenSecButton.setTypeface(typeface);
+        thirtySecButton.setTypeface(typeface);
+        sixtySecButton.setTypeface(typeface);
+
         // Set background color
         int[] androidColors = getResources().getIntArray(R.array.rainbowpastelcolors);
         int randomAndroidColor = androidColors[new Random().nextInt(androidColors.length)];
@@ -60,7 +66,7 @@ public class TimeActivity extends AppCompatActivity {
         bundle.putInt("seconds", seconds);
         intent.putExtras(bundle);
         startActivity(intent);
-        overridePendingTransition(R.transition.activity_in, R.transition.activity_out);
+        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 
 }

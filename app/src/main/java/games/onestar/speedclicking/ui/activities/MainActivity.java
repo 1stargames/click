@@ -32,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Typeface type = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
-        titleTextView.setTypeface(type);
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
+        titleTextView.setTypeface(typeface);
+        playButton.setTypeface(typeface);
 
         // Set background color
         int[] androidColors = getResources().getIntArray(R.array.rainbowpastelcolors);
@@ -45,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     void playButtonClick() {
         Intent intent = new Intent(this, TimeActivity.class);
         startActivity(intent);
-        overridePendingTransition(R.transition.activity_in, R.transition.activity_out);
+        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 
 }
