@@ -12,6 +12,8 @@
     <string name="sixty_sec_button">60 SEC</string>
 
     <!-- Play Activity -->
+    <string name="endGame">PLAY AGAIN</string>
+    <string name="newHighScore">NEW HIGH SCORE!!!</string>
     <string name="score">0</string>
 
 </resources>

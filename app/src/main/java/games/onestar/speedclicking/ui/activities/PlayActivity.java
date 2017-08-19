@@ -1,5 +1,6 @@
 package games.onestar.speedclicking.ui.activities;
 
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -7,7 +8,11 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -20,8 +25,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import games.onestar.speedclicking.R;
 import games.onestar.speedclicking.enums.GameState;
+import games.onestar.speedclicking.helper.SavedScoreHelper;
 
 public class PlayActivity extends AppCompatActivity {
+
+    private static final String TAG = "PlayActivity";
 
     @BindView(R.id.playAdView)
     AdView playAdView;
@@ -35,10 +43,17 @@ public class PlayActivity extends AppCompatActivity {
     @BindView(R.id.timeTextView)
     TextView timeTextView;
 
-    private static GameState GAME_STATE = GameState.NOT_SET;
-    private static int SCORE = 0;
+    @BindView(R.id.newHighScoreTextView)
+    TextView newHighScoreTextView;
 
+    @BindView(R.id.endGameButton)
+    Button endGameTextView;
+
+    private static GameState GAME_STATE = GameState.NOT_SET;
     private static Boolean ORIENTATION_CHANGE = false;
+
+    private int gameType = 0;
+    private static int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,16 +64,18 @@ public class PlayActivity extends AppCompatActivity {
         if (GAME_STATE == GameState.NOT_SET && !ORIENTATION_CHANGE) {
             GAME_STATE = GameState.PLAYING;
 
-            Typeface type = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
-            scoreTextView.setTypeface(type);
-            scoreTextView.setText(String.valueOf(SCORE));
+            Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
+            scoreTextView.setTypeface(typeface);
+            timeTextView.setTypeface(typeface);
+            newHighScoreTextView.setTypeface(typeface);
+            endGameTextView.setTypeface(typeface);
 
-            timeTextView.setTypeface(type);
+            scoreTextView.setText(String.valueOf(score));
+
             Bundle bundle = getIntent().getExtras();
-            int seconds = 0;
             if (bundle != null) {
-                seconds = bundle.getInt("seconds");
-                timeTextView.setText(String.valueOf(seconds));
+                gameType = bundle.getInt("seconds");
+                timeTextView.setText(String.valueOf(gameType));
             }
 
             // Set background color
@@ -66,15 +83,14 @@ public class PlayActivity extends AppCompatActivity {
             int randomAndroidColor = androidColors[new Random().nextInt(androidColors.length)];
             body.setBackgroundColor(randomAndroidColor);
 
-            new CountDownTimer(seconds * 1000, 1000) {
+            new CountDownTimer(gameType * 1000, 1000) {
 
                 public void onTick(long millisUntilFinished) {
                     timeTextView.setText(String.valueOf(millisUntilFinished / 1000));
                 }
 
                 public void onFinish() {
-                    GAME_STATE = GameState.FINISH;
-                    timeTextView.setVisibility(View.INVISIBLE);
+                    handleEndGame();
                 }
 
             }.start();
@@ -102,7 +118,7 @@ public class PlayActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         GAME_STATE = GameState.NOT_SET;
-        SCORE = 0;
+        score = 0;
         ORIENTATION_CHANGE = false;
     }
 
@@ -115,9 +131,56 @@ public class PlayActivity extends AppCompatActivity {
     @OnClick(R.id.play_activity_body)
     void click() {
         if (GAME_STATE == GameState.PLAYING) {
-            SCORE++;
-            scoreTextView.setText(String.valueOf(SCORE));
+            score++;
+            scoreTextView.setText(String.valueOf(score));
         }
+    }
+
+    @OnClick(R.id.endGameButton)
+    void endGameButtonClick() {
+        Intent intent = new Intent(this, TimeActivity.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+    }
+
+    private void handleEndGame() {
+        GAME_STATE = GameState.FINISH;
+        timeTextView.setVisibility(View.INVISIBLE);
+
+        // get saved high score
+        int highScore = 0;
+        switch (gameType) {
+            case 10:
+                highScore = SavedScoreHelper.getTenSecondsHighScore(this);
+                break;
+            case 30:
+                highScore = SavedScoreHelper.getThirtySecondsHighScore(this);
+                break;
+            case 60:
+                highScore = SavedScoreHelper.getSixtySecondsHighScore(this);
+                break;
+        }
+
+        // update high score
+        if (score > highScore) {
+            Log.d(TAG, "It's a new high score! GameType: " + gameType + "seconds, old high score: " + highScore + ", new high score: " + score);
+            newHighScoreTextView.setVisibility(View.VISIBLE);
+            newHighScoreTextView.startAnimation((Animation) AnimationUtils.loadAnimation(this, R.anim.high_score));
+            switch (gameType) {
+                case 10:
+                    SavedScoreHelper.setTenSecondsHighScore(this, score);
+                    break;
+                case 30:
+                    SavedScoreHelper.setThirtySecondsHighScore(this, score);
+                    break;
+                case 60:
+                    SavedScoreHelper.setSixtySecondsHighScore(this, score);
+                    break;
+            }
+        }
+
+        // display end screen
+        endGameTextView.setVisibility(View.VISIBLE);
     }
 
 }
