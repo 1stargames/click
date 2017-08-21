@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CLICKING</string>
+    <string name="app_name_local">CLÁR CLICK</string>
+    <string name="end_game">Spraoi Arís</string>
+    <string name="new_high_score">Scór Ard!</string>
+    <string name="sixty_seconds_button">60 soicind</string>
+    <string name="ten_seconds_button">10 soicind</string>
+    <string name="thirty_seconds_button">30 soicind</string>
+    <string name="play_button">Spraoi</string>
+</resources>

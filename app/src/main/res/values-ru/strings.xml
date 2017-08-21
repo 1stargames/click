@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CLICKING</string>
+    <string name="app_name_local">Быстрый щелчок</string>
+    <string name="end_game">ИГРАТЬ СНОВА</string>
+    <string name="new_high_score">НОВЫЙ РЕКОРД!!!</string>
+    <string name="play_button">ИГРАТЬ</string>
+    <string name="sixty_seconds_button">60 секунд</string>
+    <string name="ten_seconds_button">10 секунд</string>
+    <string name="thirty_seconds_button">30 секунд</string>
+</resources>

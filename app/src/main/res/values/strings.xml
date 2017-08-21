@@ -2,18 +2,19 @@
 
     <!-- general -->
     <string name="app_name">SPEED CLICKING</string>
+    <string name="app_name_local">SPEED CLICKING</string>
 
     <!-- Main Activity -->
     <string name="play_button">PLAY</string>
 
     <!-- Time Activity -->
-    <string name="ten_sec_button">10 SEC</string>
-    <string name="thirty_sec_button">30 SEC</string>
-    <string name="sixty_sec_button">60 SEC</string>
+    <string name="ten_seconds_button">10 SECONDS</string>
+    <string name="thirty_seconds_button">30 SECONDS</string>
+    <string name="sixty_seconds_button">60 SECONDS</string>
 
     <!-- Play Activity -->
-    <string name="endGame">PLAY AGAIN</string>
-    <string name="newHighScore">NEW HIGH SCORE!!!</string>
+    <string name="end_game">PLAY AGAIN</string>
+    <string name="new_high_score">NEW HIGH SCORE!!!</string>
     <string name="score">0</string>
 
 </resources>

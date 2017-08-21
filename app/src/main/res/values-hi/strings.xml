@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CLICKING</string>
+    <string name="end_game">फिर से चालू करें</string>
+    <string name="app_name_local">त्वरित क्लिक करें</string>
+    <string name="new_high_score">नया उच्च स्कोर!!!</string>
+    <string name="play_button">प्ले</string>
+    <string name="sixty_seconds_button">60 सेकंड</string>
+    <string name="ten_seconds_button">10 सेकंड</string>
+    <string name="thirty_seconds_button">30 सेकंड</string>
+</resources>

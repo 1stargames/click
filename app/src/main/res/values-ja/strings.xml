@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CLICKING</string>
+    <string name="end_game">再びプレー</string>
+    <string name="new_high_score">新ハイスコア！！！</string>
+    <string name="play_button">遊びます</string>
+    <string name="sixty_seconds_button">60秒</string>
+    <string name="ten_seconds_button">10秒</string>
+    <string name="thirty_seconds_button">30秒</string>
+    <string name="app_name_local">スピードクリッキング</string>
+</resources>

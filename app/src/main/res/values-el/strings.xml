@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CLICKING</string>
+    <string name="sixty_seconds_button">60 δευτερόλεπτα</string>
+    <string name="ten_seconds_button">10 δευτερόλεπτα</string>
+    <string name="thirty_seconds_button">30 δευτερόλεπτα</string>
+    <string name="end_game">ΞΑΝΑΠΑΙΖΩ</string>
+    <string name="new_high_score">ΝΕΑ ΥΨΗΛΗ ΑΠΟΤΕΛΕΣΜΑ !!!</string>
+    <string name="play_button">ΠΑΙΖΩ</string>
+    <string name="app_name_local">Γρήγορη Κλικ</string>
+</resources>

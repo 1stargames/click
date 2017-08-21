@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CLICKING</string>
+    <string name="app_name_local">كليك كويك</string>
+    <string name="end_game">العب مرة أخرى</string>
+    <string name="new_high_score">درجة عالية جديدة!!!</string>
+    <string name="play_button">لعب</string>
+    <string name="sixty_seconds_button">60 ثانية</string>
+    <string name="thirty_seconds_button">30 ثانية</string>
+    <string name="ten_seconds_button">10 ثانية</string>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SPEED CLICKING</string>
+    <string name="app_name_local">விரைவு கிளிக்</string>
+    <string name="sixty_seconds_button">60 விநாடிகள்</string>
+    <string name="ten_seconds_button">10 விநாடிகள்</string>
+    <string name="thirty_seconds_button">30 விநாடிகள்</string>
+    <string name="end_game">விளையாடு</string>
+    <string name="play_button">மீண்டும் ஆடு</string>
+    <string name="new_high_score">புதிய உயர் மதிப்பெண்!!!</string>
+</resources>
