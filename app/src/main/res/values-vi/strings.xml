@@ -5,7 +5,7 @@
     <string name="sixty_seconds_button">60 GIÂY</string>
     <string name="ten_seconds_button">10 GIÂY</string>
     <string name="thirty_seconds_button">30 GIÂY</string>
-    <string name="end_game">CHƠI</string>
+    <string name="play_again">CHƠI</string>
     <string name="play_button">CHƠI LẠI</string>
     <string name="app_name_local">Nhấp nhanh</string>
 </resources>

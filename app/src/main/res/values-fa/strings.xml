@@ -5,7 +5,7 @@
     <string name="ten_seconds_button">10 ثانیه</string>
     <string name="thirty_seconds_button">30 ثانیه</string>
     <string name="play_button">بازی</string>
-    <string name="end_game">دوباره بازی کن</string>
+    <string name="play_again">دوباره بازی کن</string>
     <string name="app_name_local">کلیک سریع</string>
     <string name="new_high_score">بالاترین امتیاز جدید!!!</string>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">SPEED CLICKING</string>
     <string name="app_name_local">CLIC RAPIDO</string>
-    <string name="end_game">GIOCA ANCORA</string>
+    <string name="play_again">GIOCA ANCORA</string>
     <string name="new_high_score">NUOVO RECORD!!!</string>
     <string name="play_button">GIOCARE</string>
     <string name="sixty_seconds_button">60 SECONDI</string>

@@ -22,7 +22,7 @@
     <Button
         android:id="@+id/tenSecButton"
         style="@style/menu_button"
-        android:text="@string/ten_sec_button"
+        android:text="@string/ten_seconds_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -31,7 +31,7 @@
     <Button
         android:id="@+id/thirtySecButton"
         style="@style/menu_button"
-        android:text="@string/thirty_sec_button"
+        android:text="@string/thirty_seconds_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -40,7 +40,7 @@
     <Button
         android:id="@+id/sixtySecButton"
         style="@style/menu_button"
-        android:text="@string/sixty_sec_button"
+        android:text="@string/sixty_seconds_button"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">SPEED CLICKING</string>
     <string name="app_name_local">SCHNELLLKLICK</string>
-    <string name="end_game">SPIEL NOCHMAL</string>
+    <string name="play_again">SPIEL NOCHMAL</string>
     <string name="new_high_score">NEUER HIGHSCORE!!!</string>
     <string name="play_button">SPIELEN</string>
     <string name="score"></string>

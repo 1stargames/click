@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SPEED CLICKING</string>
-    <string name="end_game">फिर से चालू करें</string>
+    <string name="play_again">फिर से चालू करें</string>
     <string name="app_name_local">त्वरित क्लिक करें</string>
     <string name="new_high_score">नया उच्च स्कोर!!!</string>
     <string name="play_button">प्ले</string>

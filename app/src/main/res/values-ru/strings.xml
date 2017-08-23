@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">SPEED CLICKING</string>
     <string name="app_name_local">Быстрый щелчок</string>
-    <string name="end_game">ИГРАТЬ СНОВА</string>
+    <string name="play_again">ИГРАТЬ СНОВА</string>
     <string name="new_high_score">НОВЫЙ РЕКОРД!!!</string>
     <string name="play_button">ИГРАТЬ</string>
     <string name="sixty_seconds_button">60 секунд</string>

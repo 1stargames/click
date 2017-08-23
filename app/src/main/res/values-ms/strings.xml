@@ -5,7 +5,7 @@
     <string name="sixty_seconds_button">60 saat</string>
     <string name="ten_seconds_button">10 saat</string>
     <string name="thirty_seconds_button">30 saat</string>
-    <string name="end_game">Bermain lagi</string>
+    <string name="play_again">Bermain lagi</string>
     <string name="app_name_local">Klik cepat</string>
     <string name="new_high_score">Nilai tinggi baru !!!</string>
 </resources>

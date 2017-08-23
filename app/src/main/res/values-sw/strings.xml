@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">SPEED CLICKING</string>
     <string name="new_high_score">Alama mpya ya juu!!!</string>
-    <string name="end_game">CHEZA TENA</string>
+    <string name="play_again">CHEZA TENA</string>
     <string name="play_button">CHEZA</string>
     <string name="sixty_seconds_button">Sekunde 60</string>
     <string name="ten_seconds_button">Sekunde 10</string>

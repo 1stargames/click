@@ -13,7 +13,7 @@
     <string name="sixty_seconds_button">60 SECONDS</string>
 
     <!-- Play Activity -->
-    <string name="end_game">PLAY AGAIN</string>
+    <string name="play_again">PLAY AGAIN</string>
     <string name="new_high_score">NEW HIGH SCORE!!!</string>
     <string name="score">0</string>
 

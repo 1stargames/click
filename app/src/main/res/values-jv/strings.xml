@@ -5,7 +5,7 @@
     <string name="ten_seconds_button">10 detik</string>
     <string name="thirty_seconds_button">30 detik</string>
     <string name="app_name_local">Cepet Klik</string>
-    <string name="end_game">Muter maneh</string>
+    <string name="play_again">Muter maneh</string>
     <string name="new_high_score">Skor Tinggi Baru !!!</string>
     <string name="play_button">Muter</string>
 </resources>

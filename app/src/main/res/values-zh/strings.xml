@@ -5,7 +5,7 @@
     <string name="sixty_seconds_button">60秒</string>
     <string name="thirty_seconds_button">30秒</string>
     <string name="play_button">玩</string>
-    <string name="end_game">再玩一次</string>
+    <string name="play_again">再玩一次</string>
     <string name="new_high_score">新高分！</string>
     <string name="app_name_local">快速点击</string>
 </resources>
