@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/play_button"
+            style="@style/main_menu_button"
+            android:text="@string/play" />
+
+        <TextView
+            android:id="@+id/trophy_button"
+            style="@style/main_menu_button"
+            android:text="@string/trophy" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/github_button"
+            style="@style/main_menu_button"
+            android:text="@string/github" />
+
+        <TextView
+            android:id="@+id/settings_button"
+            style="@style/main_menu_button"
+            android:text="@string/settings" />
+
+        <TextView
+            android:id="@+id/rate_button"
+            style="@style/main_menu_button"
+            android:text="@string/rate" />
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+</android.support.v7.widget.LinearLayoutCompat>

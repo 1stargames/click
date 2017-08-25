@@ -5,7 +5,11 @@
     <string name="app_name_local">SPEED CLICKING</string>
 
     <!-- Main Activity -->
-    <string name="play_button">PLAY</string>
+    <string name="github">&#xf09b;</string>
+    <string name="play">&#xf11b;</string>
+    <string name="trophy">&#xf091;</string>
+    <string name="settings">&#xf013;</string>
+    <string name="rate">&#xf005;</string>
 
     <!-- Time Activity -->
     <string name="ten_seconds_button">10 SECONDS</string>
@@ -13,7 +17,6 @@
     <string name="sixty_seconds_button">60 SECONDS</string>
 
     <!-- Play Activity -->
-    <string name="play_again">PLAY AGAIN</string>
     <string name="new_high_score">NEW HIGH SCORE!!!</string>
     <string name="score">0</string>
 

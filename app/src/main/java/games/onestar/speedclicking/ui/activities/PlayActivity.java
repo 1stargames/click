@@ -1,6 +1,5 @@
 package games.onestar.speedclicking.ui.activities;
 
-import android.content.Intent;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -8,11 +7,11 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutCompat;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -46,8 +45,8 @@ public class PlayActivity extends AppCompatActivity {
     @BindView(R.id.newHighScoreTextView)
     TextView newHighScoreTextView;
 
-    @BindView(R.id.endGameButton)
-    Button endGameTextView;
+    @BindView(R.id.buttons_line)
+    LinearLayoutCompat buttonLines;
 
     private static GameState GAME_STATE = GameState.NOT_SET;
     private static Boolean ORIENTATION_CHANGE = false;
@@ -58,30 +57,16 @@ public class PlayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_play);
-        ButterKnife.bind(this);
+        setLayout();
 
         if (GAME_STATE == GameState.NOT_SET && !ORIENTATION_CHANGE) {
             GAME_STATE = GameState.PLAYING;
-
-            Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
-            scoreTextView.setTypeface(typeface);
-            timeTextView.setTypeface(typeface);
-            newHighScoreTextView.setTypeface(typeface);
-            endGameTextView.setTypeface(typeface);
-
-            scoreTextView.setText(String.valueOf(score));
 
             Bundle bundle = getIntent().getExtras();
             if (bundle != null) {
                 gameType = bundle.getInt("seconds");
                 timeTextView.setText(String.valueOf(gameType));
             }
-
-            // Set background color
-            int[] androidColors = getResources().getIntArray(R.array.rainbowpastelcolors);
-            int randomAndroidColor = androidColors[new Random().nextInt(androidColors.length)];
-            body.setBackgroundColor(randomAndroidColor);
 
             new CountDownTimer(gameType * 1000, 1000) {
 
@@ -94,24 +79,40 @@ public class PlayActivity extends AppCompatActivity {
                 }
 
             }.start();
-
-            // Set full screen
-            int uiOptions = this.getWindow().getDecorView().getSystemUiVisibility();
-            uiOptions ^= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
-            // Status bar hiding: Backwards compatible to Jellybean
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                uiOptions ^= View.SYSTEM_UI_FLAG_FULLSCREEN;
-            }
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                uiOptions ^= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
-            }
-            View decorView = getWindow().getDecorView();
-            decorView.setSystemUiVisibility(uiOptions);
-
-            // Set ads
-            AdRequest adRequest = new AdRequest.Builder().build();
-            playAdView.loadAd(adRequest);
         }
+    }
+
+    private void setLayout() {
+        setContentView(R.layout.activity_play);
+        ButterKnife.bind(this);
+        Typeface eightBitTypeface = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
+        scoreTextView.setTypeface(eightBitTypeface);
+        timeTextView.setTypeface(eightBitTypeface);
+        newHighScoreTextView.setTypeface(eightBitTypeface);
+
+        scoreTextView.setText(String.valueOf(score));
+
+        // Set background color
+        int[] androidColors = getResources().getIntArray(R.array.rainbowpastelcolors);
+        int randomAndroidColor = androidColors[new Random().nextInt(androidColors.length)];
+        body.setBackgroundColor(randomAndroidColor);
+
+        // Set full screen
+        int uiOptions = this.getWindow().getDecorView().getSystemUiVisibility();
+        uiOptions ^= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        // Status bar hiding: Backwards compatible to Jellybean
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
+            uiOptions ^= View.SYSTEM_UI_FLAG_FULLSCREEN;
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            uiOptions ^= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        }
+        View decorView = getWindow().getDecorView();
+        decorView.setSystemUiVisibility(uiOptions);
+
+        // Set ads
+        AdRequest adRequest = new AdRequest.Builder().build();
+        playAdView.loadAd(adRequest);
     }
 
     @Override
@@ -126,6 +127,11 @@ public class PlayActivity extends AppCompatActivity {
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         ORIENTATION_CHANGE = true;
+        setLayout();
+        if (GAME_STATE == GameState.FINISH) {
+            timeTextView.setVisibility(View.INVISIBLE);
+            buttonLines.setVisibility(View.VISIBLE);
+        }
     }
 
     @OnClick(R.id.play_activity_body)
@@ -134,13 +140,6 @@ public class PlayActivity extends AppCompatActivity {
             score++;
             scoreTextView.setText(String.valueOf(score));
         }
-    }
-
-    @OnClick(R.id.endGameButton)
-    void endGameButtonClick() {
-        Intent intent = new Intent(this, TimeActivity.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
     }
 
     private void handleEndGame() {
@@ -180,7 +179,7 @@ public class PlayActivity extends AppCompatActivity {
         }
 
         // display end screen
-        endGameTextView.setVisibility(View.VISIBLE);
+        buttonLines.setVisibility(View.VISIBLE);
     }
 
 }

@@ -3,11 +3,10 @@ package games.onestar.speedclicking.ui.activities;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -25,18 +24,14 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.titleTextView)
     TextView titleTextView;
 
-    @BindView(R.id.playButton)
-    Button playButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
-        titleTextView.setTypeface(typeface);
-        playButton.setTypeface(typeface);
+        Typeface eightBitTypeface = Typeface.createFromAsset(getAssets(), "fonts/8-bit-wonder.ttf");
+        titleTextView.setTypeface(eightBitTypeface);
 
         // Set background color
         int[] androidColors = getResources().getIntArray(R.array.rainbowpastelcolors);
@@ -57,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
         decorView.setSystemUiVisibility(uiOptions);
     }
 
-    @OnClick(R.id.playButton)
-    void playButtonClick() {
+    @OnClick(R.id.body)
+    void bodyClick() {
         Intent intent = new Intent(this, TimeActivity.class);
         startActivity(intent);
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
