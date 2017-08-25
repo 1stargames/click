@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("games.onestar.click", appContext.getPackageName());
+        assertEquals("games.onestar.speedclicking", appContext.getPackageName());
     }
 }

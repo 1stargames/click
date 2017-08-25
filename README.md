@@ -1,1 +1,1 @@
-# speed_clicking
+# Speed Clicking
