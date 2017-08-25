@@ -67,6 +67,7 @@ public class ButtonsLineLayout extends LinearLayoutCompat {
     void githubButtonClick() {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(GITHUB_LINK));
         getContext().startActivity(browserIntent);
+        ((Activity) getContext()).finish();
     }
 
     @OnClick(R.id.play_button)
@@ -74,6 +75,7 @@ public class ButtonsLineLayout extends LinearLayoutCompat {
         Intent intent = new Intent(getContext(), TimeActivity.class);
         getContext().startActivity(intent);
         ((Activity) getContext()).overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+        ((Activity) getContext()).finish();
     }
 
     @OnClick(R.id.trophy_button)

@@ -92,6 +92,7 @@ public class TimeActivity extends AppCompatActivity {
         intent.putExtras(bundle);
         startActivity(intent);
         overridePendingTransition(R.anim.activity_in, R.anim.activity_out);
+        finish();
     }
 
 }
