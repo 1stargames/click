@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "588708818980",
+    "firebase_url": "https://speed-clicking.firebaseio.com",
+    "project_id": "speed-clicking",
+    "storage_bucket": "speed-clicking.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588708818980:android:6bddafb451be1e5a",
+        "android_client_info": {
+          "package_name": "games.onestar.speedclicking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588708818980-u76elqed5na2b551b29v3o808oqkonic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "games.onestar.speedclicking",
+            "certificate_hash": "b1b2ee5bb8cfc1c9eee580d30bbf38b6c5f040d1"
+          }
+        },
+        {
+          "client_id": "588708818980-92262f2a7kah3253b88195l3233ffesc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAo4Xs3iCgGEFpsvjQ5AnfWFoXQCimq55Q"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588708818980-92262f2a7kah3253b88195l3233ffesc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
