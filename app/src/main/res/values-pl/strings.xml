@@ -5,7 +5,5 @@
     <string name="sixty_seconds_button">60 sek</string>
     <string name="ten_seconds_button">10 sek</string>
     <string name="thirty_seconds_button">30 sek</string>
-    <string name="play_button">GRAĆ</string>
-    <string name="play_again">ZAGRAĆ PONOWNIE</string>
     <string name="app_name_local">Szybkie kliknięcie</string>
 </resources>

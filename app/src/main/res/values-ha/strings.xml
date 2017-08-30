@@ -2,9 +2,7 @@
 <resources>
     <string name="app_name">SPEED CLICKING</string>
     <string name="app_name_local">TAMBAYA KASHI</string>
-    <string name="play_again">KYA KUMA</string>
     <string name="new_high_score">BABI NA BAYA BAYA!</string>
-    <string name="play_button">KUMA</string>
     <string name="sixty_seconds_button">60 SECONDS</string>
     <string name="ten_seconds_button">10 SECONDS</string>
     <string name="thirty_seconds_button">30 SECONDS</string>

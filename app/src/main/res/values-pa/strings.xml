@@ -4,8 +4,6 @@
     <string name="sixty_seconds_button">60 ਸਕਿੰਟ</string>
     <string name="ten_seconds_button">10 ਸਕਿੰਟ</string>
     <string name="thirty_seconds_button">30 ਸਕਿੰਟ</string>
-    <string name="play_button">ਪਲੇ</string>
     <string name="new_high_score">ਨਵਾਂ ਹਾਈ ਸਕੋਰ !!!</string>
-    <string name="play_again">ਦੁਬਾਰਾ ਖੇਡੋ</string>
     <string name="app_name_local">ਤੇਜ਼ ਕਲਿੱਕ ਕਰੋ</string>
 </resources>

@@ -5,7 +5,6 @@
     <string name="app_name_local">CLIC VITE</string>
 
     <!-- Main Activity -->
-    <string name="play_button">JOUER</string>
 
     <!-- Time Activity -->
     <string name="ten_seconds_button">10 SECONDES</string>
@@ -13,7 +12,6 @@
     <string name="sixty_seconds_button">60 SECONDES</string>
 
     <!-- Play Activity -->
-    <string name="play_again">REJOUER</string>
     <string name="new_high_score">NOUVEAU RECORD !!!</string>
 
 </resources>

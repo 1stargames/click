@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">SPEED CLICKING</string>
-    <string name="play_button">ప్లే</string>
     <string name="sixty_seconds_button">60 సెకన్లు</string>
     <string name="ten_seconds_button">30 సెకన్లు</string>
     <string name="thirty_seconds_button">10 సెకన్లు</string>
-    <string name="play_again">మళ్ళీ ప్లే</string>
     <string name="new_high_score">కొత్త హై స్కోర్!</string>
     <string name="app_name_local">త్వరిత క్లిక్</string>
 </resources>
