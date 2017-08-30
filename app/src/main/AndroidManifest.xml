@@ -3,7 +3,7 @@
     package="games.onestar.speedclicking">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -33,7 +33,9 @@
         <activity android:name="games.onestar.speedclicking.ui.activities.TimeActivity" />
 
         <!-- receivers -->
-        <receiver android:name="games.onestar.speedclicking.receivers.SplashScreenReceiver">
+        <receiver
+            android:name="games.onestar.speedclicking.receivers.SplashScreenReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="games.onestar.START_SPEED_CLICKING" />
             </intent-filter>
