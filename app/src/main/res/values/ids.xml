@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="banner_ad_unit_id">ReplaceMe</string>
+    <string name="banner_ad_unit_id" translatable="false">ReplaceMe</string>
 </resources>
