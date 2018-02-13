@@ -5,7 +5,7 @@ android:
     # Update tools and then platform-tools explicitly so lint gets an updated database. Can be removed once 3.0 is out.
     - tools
     - platform-tools
-    - build-tools-26.0.2
+    - build-tools-26.0.3
     - android-26
     - extra-google-m2repository
     - extra-android-m2repository
