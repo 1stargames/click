@@ -1,4 +1,4 @@
-package games.onestar.speeclicking.ui.activities
+package games.onestar.speedclicking.ui.activities
 
 import android.content.Intent
 import android.graphics.Typeface

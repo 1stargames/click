@@ -1,4 +1,4 @@
-package games.onestar.speeclicking.enums
+package games.onestar.speedclicking.enums
 
 enum class GameState {
 

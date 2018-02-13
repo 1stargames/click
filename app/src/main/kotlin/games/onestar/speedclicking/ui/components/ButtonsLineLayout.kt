@@ -1,4 +1,4 @@
-package games.onestar.speeclicking.ui.components
+package games.onestar.speedclicking.ui.components
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -15,8 +15,8 @@ import android.widget.TextView
 import butterknife.BindView
 import butterknife.ButterKnife
 import butterknife.OnClick
-import games.onestar.speedclicking.R
 import games.onestar.speedclicking.ui.activities.TimeActivity
+import games.onestar.speedclicking.R
 
 class ButtonsLineLayout : LinearLayoutCompat {
 

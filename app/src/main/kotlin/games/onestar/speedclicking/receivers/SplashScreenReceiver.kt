@@ -1,9 +1,8 @@
-package games.onestar.speeclicking.receivers
+package games.onestar.speedclicking.receivers
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
-
 import games.onestar.speedclicking.ui.activities.MainActivity
 
 class SplashScreenReceiver : BroadcastReceiver() {

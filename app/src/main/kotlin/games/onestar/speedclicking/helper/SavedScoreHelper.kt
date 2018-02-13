@@ -1,4 +1,4 @@
-package games.onestar.speeclicking.helper
+package games.onestar.speedclicking.helper
 
 import android.content.Context
 

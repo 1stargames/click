@@ -1,4 +1,4 @@
-package games.onestar.speeclicking.ui.activities
+package games.onestar.speedclicking.ui.activities
 
 import android.content.res.Configuration
 import android.graphics.Typeface
@@ -18,9 +18,9 @@ import butterknife.ButterKnife
 import butterknife.OnClick
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
-import games.onestar.speeclicking.enums.GameState
-import games.onestar.speeclicking.helper.SavedScoreHelper
 import games.onestar.speedclicking.R
+import games.onestar.speedclicking.enums.GameState
+import games.onestar.speedclicking.helper.SavedScoreHelper
 import java.util.*
 
 class PlayActivity : AppCompatActivity() {
@@ -56,7 +56,7 @@ class PlayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setLayout()
 
-        if (GAME_STATE === GameState.NOT_SET && (!ORIENTATION_CHANGE!!)!!) {
+        if (GAME_STATE === GameState.NOT_SET && (!ORIENTATION_CHANGE!!)) {
             GAME_STATE = GameState.PLAYING
 
             val bundle = intent.extras
