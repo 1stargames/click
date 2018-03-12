@@ -41,7 +41,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.google.android.gms:play-services-games:11.8.0'
     compile 'com.google.firebase:firebase-ads:11.8.0'
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.2.10'
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.2.30'
 
     /**
      * 1StarGames Libs
